@@ -65,7 +65,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  */
 
 @TeleOp(name="Basic: Omni Linear OpMode", group="Linear OpMode")
-@Disabled
+
 public class Flycode extends LinearOpMode {
 
     // Declare OpMode members for each of the 4 motors.
@@ -86,7 +86,7 @@ public class Flycode extends LinearOpMode {
 
 
     public static int shootingSpeed = 1500;
-    public static int shootingSpeed = 1500;
+    public static int offSpeed = 1500;
     @Override
     public void runOpMode() {
 
@@ -194,13 +194,13 @@ public class Flycode extends LinearOpMode {
             if (gamepad1.right_trigger > .1) {
                nectarFly.setVelocity(shootingSpeed);
             } else {
-                nectarFly.setVelocity(0);
+                nectarFly.setVelocity(offSpeed);
             }
             if (gamepad1.left_trigger > .1) {
                 pollenFly.setVelocity(shootingSpeed);
 
             } else {
-                pollenFly.setVelocity(0);
+                pollenFly.setVelocity(offSpeed);
             }
 
 
